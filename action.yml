@@ -1,0 +1,19 @@
+name: "Docker Push"
+author: "Konstantin Bode"
+description: "Action to push a built docker image to a docker registry"
+inputs:
+  name:
+    description: "The name of the image you would like to push"
+    required: true
+  username:
+    description: "The login username for the registry"
+    required: true
+  password:
+    description: "The login password for the registry"
+    required: true
+  registry:
+    description: "Use registry for pushing to a custom registry"
+    required: true
+runs:
+  using: "node12"
+  main: lib/main.js
