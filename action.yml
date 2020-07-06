@@ -14,6 +14,9 @@ inputs:
   registry:
     description: "Use registry for pushing to a custom registry"
     required: true
+  id:
+    description: "The id to tag the given image with"
+    required: false
 runs:
   using: "node12"
   main: lib/main.js
