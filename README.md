@@ -23,16 +23,17 @@ jobs:
 ```
 
 
-## Mandatory Inputs
+## Input arguments
 
-| Name | Description|
-|-|-|
-| name | The name of the image you would like to push |
-| username | The login username for the registry |
-| password | The login password for the registry |
-| registry | Use registry for pushing to a custom registry |
-| id | The id to tag the given image with |
+| Name | Description|required|
+|---|---|---|
+| name | The name of the image you would like to push |true|
+| username | The login username for the registry |true|
+| password | The login password for the registry |true|
+| registry | Use registry for pushing to a custom registry |true|
+| id | The id to tag the given image with |false|
 
 ## Author Information
 
 [Konstantin Bode](https://github.com/BodeSpezial), [ambimax® GmbH](https://ambimax.de)
+[Dominik Wißler](https://github.com/Wysselbie), [ambimax® GmbH](https://ambimax.de)
