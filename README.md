@@ -11,15 +11,16 @@ name: Example Job
 on: [push]
 jobs:
   - name: build image
-        run: docker build -t example-name .
- - name: Publish to Registry
-        with:
-          name: example-name
-          username: ${{ secrets.DOCKER_REG_USERNAME }}
-          password: ${{ secrets.DOCKER_REG_PASSWORD }}
-          registry: registry.example.abc
-          id: image-tag-to-use
-        uses: ambimax/action-docker-push@X.X.X
+    run: docker build -t example-name .
+
+  - name: Publish to Registry
+    uses: ambimax/action-docker-push@v1
+    with:
+      name: example-name
+      username: ${{ secrets.DOCKER_USERNAME_AMBIMAX }}
+      password: ${{ secrets.DOCKER_PASSWORD_AMBIMAX }}
+      registry: ${{ secrets.DOCKER_REGISTRY_AMBIMAX }}
+      id: image-tag-to-use
 ```
 
 
