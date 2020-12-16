@@ -11,7 +11,7 @@ name: Example Job
 on: [push]
 jobs:
   - name: build image
-    run: docker build -t example-name .
+    run: docker build -t example-name:image-tag-to-use .
 
   - name: Publish to Registry
     uses: ambimax/action-docker-push@v1
